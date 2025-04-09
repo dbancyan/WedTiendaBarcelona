@@ -325,6 +325,84 @@
             font-size: 0.9rem;
         }
 
+        /* Transmisiones */
+        .broadcasts {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .broadcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .broadcast-card {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .broadcast-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .broadcast-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--barca-blue) 50%, var(--barca-red) 50%);
+        }
+
+        .broadcast-header .team-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .broadcast-header .vs {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .broadcast-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .broadcast-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+        }
+
+        .broadcast-date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .broadcast-channels {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .channel {
+            background-color: var(--barca-blue);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
         /* Jugadores Destacados */
         .players {
             padding: 4rem 0;
@@ -736,6 +814,7 @@
                 <ul>
                     <li><a href="#noticias">Noticias</a></li>
                     <li><a href="#partidos">Partidos</a></li>
+                    <li><a href="#transmisiones">Transmisiones</a></li>
                     <li><a href="#jugadores">Jugadores</a></li>
                     <li><a href="#tienda">Tienda</a></li>
                     <li><a href="#estadio">Camp Nou</a></li>
@@ -851,6 +930,67 @@
                     <div class="match-venue">
                         <div>Estadio Camp Nou</div>
                         <a href="#" class="read-more">Comprar Entrada</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transmisiones -->
+    <section id="transmisiones" class="broadcasts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Transmisiones en Vivo</h2>
+            </div>
+            <div class="broadcast-grid">
+                <div class="broadcast-card">
+                    <div class="broadcast-header">
+                        <img src="img/teams/barcelona.png" alt="Barcelona Logo" class="team-logo">
+                        <div class="vs">VS</div>
+                        <img src="img/teams/madrid.png" alt="Real Madrid Logo" class="team-logo">
+                    </div>
+                    <div class="broadcast-info">
+                        <h3>FC Barcelona vs Real Madrid</h3>
+                        <p class="broadcast-date">12 Abr, 21:00</p>
+                        <div class="broadcast-channels">
+                            <span class="channel">Barça TV</span>
+                            <span class="channel">Movistar+</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ver transmisión</a>
+                    </div>
+                </div>
+
+                <div class="broadcast-card">
+                    <div class="broadcast-header">
+                        <img src="img/teams/city.jpg" alt="Manchester City Logo" class="team-logo">
+                        <div class="vs">VS</div>
+                        <img src="img/teams/barcelona.png" alt="Barcelona Logo" class="team-logo">
+                    </div>
+                    <div class="broadcast-info">
+                        <h3>Manchester City vs FC Barcelona</h3>
+                        <p class="broadcast-date">16 Abr, 20:45</p>
+                        <div class="broadcast-channels">
+                            <span class="channel">CBS Sports</span>
+                            <span class="channel">Movistar+</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ver transmisión</a>
+                    </div>
+                </div>
+
+                <div class="broadcast-card">
+                    <div class="broadcast-header">
+                        <img src="img/teams/barcelona.png" alt="Barcelona Logo" class="team-logo">
+                        <div class="vs">VS</div>
+                        <img src="img/teams/valencia.jpg" alt="Valencia Logo" class="team-logo">
+                    </div>
+                    <div class="broadcast-info">
+                        <h3>FC Barcelona vs Valencia CF</h3>
+                        <p class="broadcast-date">20 Abr, 18:30</p>
+                        <div class="broadcast-channels">
+                            <span class="channel">Barça TV</span>
+                            <span class="channel">Movistar+</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Ver transmisión</a>
                     </div>
                 </div>
             </div>
@@ -1043,6 +1183,7 @@
                     <ul>
                         <li><a href="#noticias">Noticias</a></li>
                         <li><a href="#partidos">Partidos</a></li>
+                        <li><a href="#transmisiones">Transmisiones</a></li>
                         <li><a href="#jugadores">Jugadores</a></li>
                         <li><a href="#tienda">Tienda</a></li>
                         <li><a href="#estadio">Camp Nou</a></li>
